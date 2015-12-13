@@ -10,7 +10,7 @@ devtools::install_github('arevaju/ocpuleaflet')
 library(opencpu)
 ### Working example using Leaflet from rCharts
 opencpu$browse('/library/ocpuleaflet/www/index2.html')
-### Testing example not working
+### Testing example not working using Leaflet package
 opencpu$browse('/library/ocpuleaflet/www/index.html')
 ```
 
