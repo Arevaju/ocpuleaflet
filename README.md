@@ -1,4 +1,4 @@
-This is an [OpenCPU](http://opencpu.org) application, originally based on the [sochi repo](https://github.com/ramnathv/sochi) by @ramnathv, that uses the Highcharts binding in [rCharts](http://rcharts.io) to visualize some example data, together with Leaflet maps, also including other demos from the OpenCPU repo that we are testing.
+This is an [OpenCPU](http://opencpu.org) application, originally based on the [sochi repo](https://github.com/ramnathv/sochi) by @ramnathv. I am trying to test leaflet package https://cran.r-project.org/web/packages/leaflet/index.html within an OpenCPU app.
 
 ### Quick Start
 
@@ -8,6 +8,9 @@ The easiest way to run this webapp locally is to install the `ocpuleaflet` packa
 install.packages('XML', type = 'source')
 devtools::install_github('arevaju/ocpuleaflet')
 library(opencpu)
+### Working example using Leaflet from rCharts
 opencpu$browse('/library/ocpuleaflet/www/index2.html')
+### Testing example not working
+opencpu$browse('/library/ocpuleaflet/www/index.html')
 ```
 
