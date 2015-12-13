@@ -1,0 +1,19 @@
+Package: ocpuleaflet
+Type: Package
+Title: OpenCPU App testing Leaflet
+Version: 1.0
+Date: 2015-13-12
+Author: Juan Arevalo-Torres
+Maintainer: Juan Arevalo-Torres <juan.arevalo@randbe.es>
+Description: OpenCPU App testing Leaflet
+License: MIT
+LazyData: true
+Imports:
+  XML,
+  reshape2,
+  leaflet,
+  rCharts,
+  rgdal
+Collate:
+  plotting.R
+  leaflet_geojson_pol.R
