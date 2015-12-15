@@ -1,22 +1,27 @@
 leafmap1 <- function(ecoregion='10105',wdpa_id='1500'){
 require(leaflet)
-map<-leaflet()  %>% # %>% addTiles()
-  addWMSTiles(
-    "http://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&",
-    layers='OI.OrthoimageCoverage',
-    options = WMSTileOptions(format = "image/png", transparent = TRUE),
-    attribution = "PNOA cedido por © Instituto Geográfico Nacional"
-  ) 
-print(map)
+require(shiny)
+require(htmlwidgets)
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m 
+
 }
-saveleafmap1 <- function(ecoregion='10105',wdpa_id='1500'){
-  a <- leafmap(ecoregion, wdpa_id)
-  a$set(height = 200)
-  a$save('output.html', cdn = T)
-  return(invisible())
-}
+
+
+
+
 inlineleafmap1 <- function(ecoregion='10105',wdpa_id='1500'){
-  a <- leafmap(ecoregion, wdpa_id)
-  #a$set(height = 200)
-  paste(capture.output(a$show('inline')), collapse ='\n')
+  a <- leafmap1(ecoregion, wdpa_id)
+  library(htmltools)
+  b<-tags$html(a) # script
+ # b<-tags$span(id = 'map', class = 'leaflet')
+  kk<-paste(capture.output(b),collapse='\n')
+  return(kk)
 }
+#inlineleafmap1 <- function(ecoregion='10105',wdpa_id='1500'){
+#  a <- leafmap1(ecoregion, wdpa_id)
+  #a$set(height = 200)
+#  paste(capture.output(a$show('inline')), collapse ='\n')
+#}

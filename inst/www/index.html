@@ -4,14 +4,17 @@
   <head>
     <title>Basemap Leafmap</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel='stylesheet'>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="lib/htmlwidgets-0.5/htmlwidgets.js"></script> 
+   <link href="lib/leaflet-0.7.3/leaflet.css" rel="stylesheet" />
+   <script src="lib/leaflet-0.7.3/leaflet.js"></script>
+   <link href="lib/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+   <script src="lib/leaflet-binding-1.0.0/leaflet.js"></script>
     <script src='https://rawgithub.com/leaflet-extras/leaflet-providers/gh-pages/leaflet-providers.js' type='text/javascript'></script> 
     <script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
     <script src='opencpu/opencpu-0.4.js' type='text/javascript'></script>
     <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js'></script>
     <style>
-   .rChart {
+   .leaflet {
       display: block;
       margin-left: auto; 
       margin-right: auto;
@@ -20,9 +23,6 @@
     }
     .container{
       margin-top: 40px;
-    }
-    .map{
-      height: 480px;
     }
 
     </style>
@@ -48,7 +48,7 @@
            ng-options='wdpa_id for wdpa_id in wdpa_ids'></select>
         </div>
        <div class='col-md-9'>
-		<div id="map"></div>   
+		<div id="map" class = 'leaflet'></div>   
        </div>
       </div>
    </div>

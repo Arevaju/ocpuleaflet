@@ -46,7 +46,7 @@
            ng-options='wdpa_id for wdpa_id in wdpa_ids'></select>
         </div>
        <div class='col-md-9'>
-		<span class="leaflet" id= map></span> 
+		<div id="map"></div>   
        </div>
       </div>
    </div>
