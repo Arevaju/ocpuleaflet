@@ -3,7 +3,7 @@ Type: Package
 Title: OpenCPU App testing Leaflet
 Version: 1.0
 Date: 2015-13-12
-Author: Juan Arevalo-Torres
+Author: Juan Arevalo-Torres <juan.arevalo@randbe.es>, Javier Martinez-Lopez <javi.martinez.lopez@gmail.com>
 Maintainer: Juan Arevalo-Torres <juan.arevalo@randbe.es>
 Description: OpenCPU App testing Leaflet
 License: MIT
